@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
+        tools:context=".MapsActivity" />
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchBubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/search_bubble_background"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@drawable/search_bubble_background"
+        app:queryHint="Search Here"
+        app:submitBackground="@drawable/search_bubble_background" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_maps"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <Button
+        android:id="@+id/map_navigation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/search_bubble_background"
+        android:text="Destination Reached"
+        android:textColor="?android:attr/textColor" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/autocompleteSuggestions"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:background="?attr/colorSearchBubbleBackground"
+        android:translationY="60dp"
+        tools:itemCount="5"
+        tools:listitem="@layout/recycler_view_item" />
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/colorBackground"
+    android:padding="16dp">
+
+    <!-- Table header row (optional) -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Username column header -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="?android:attr/colorBackground"
+            android:text="Username"
+            android:textColor="?android:attr/textColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Contribution column header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/colorBackground"
+            android:gravity="end"
+            android:text="Contribution"
+            android:textColor="?android:attr/textColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <!-- Table rows for data -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Username TextView -->
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="?android:attr/textColor"
+            android:textSize="16sp" />
+
+        <!-- Contribution TextView -->
+        <TextView
+            android:id="@+id/contributionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="?android:attr/textColor"
+            android:textSize="16sp" />
+
+    </TableRow>
+
+    <!-- Divider line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/textColor" />
+
+
+</TableLayout>

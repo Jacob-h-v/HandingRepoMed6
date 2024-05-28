@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">192.168.0.185</domain>
+        <domain includeSubdomains="true">med6gr5bikeapp.ddns.net</domain>
+        <domain includeSubdomains="true">ed7bukltv2.eu.loclx.io</domain>
+    </domain-config>
+</network-security-config>

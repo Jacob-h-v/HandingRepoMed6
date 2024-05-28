@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    tools:context=".CreateAccountFragment">
+    <!--    android:background="@android:color/transparent"-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground">
+
+        <EditText
+            android:id="@+id/createPasswordET"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="35dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="?attr/editTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createEmailET" />
+
+        <EditText
+            android:id="@+id/createUsernameET"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="text|textPersonName"
+            android:textColor="?attr/editTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CreateAccountTitleText" />
+
+        <EditText
+            android:id="@+id/createEmailET"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="35dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="text|textEmailAddress"
+            android:textColor="?attr/editTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createUsernameET" />
+
+        <TextView
+            android:id="@+id/CreateAccountTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="125dp"
+            android:text="Please enter your information below. \n Email is not required."
+            android:textColor="?android:attr/textColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/registerAccountBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="?android:attr/textColorTertiaryInverse"
+            android:onClick="onRegisterAccClick"
+            android:text="Register Account"
+            android:textColor="?android:attr/textColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createPasswordET" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
